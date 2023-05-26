@@ -1,0 +1,26 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.shadow-custom{
+  box-shadow:7px 7px 15px #45566754, -8px -8px 15px rgb(81 101 121 / 4%),
+  inset -5px -4px 13px 0px rgb(81 101 121 / 35%),
+  inset 6px 7px 12px 0px rgb(255 255 255 / 94%);
+  border-radius: 12px;
+}
+.audio-controls{
+  display: grid;
+  grid-template-columns: 1fr 9fr 1fr;
+  gap: 20px;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.audio-progress {
+  height: 4px; 
+}
+.audio-progress .progress-bar {
+  background-color: black;
+}
