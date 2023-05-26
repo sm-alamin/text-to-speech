@@ -14,7 +14,7 @@
 
 ## Installation
 
-Install The Puzzled Mind App with npm
+Installation:
 
 ```bash
   npm install
