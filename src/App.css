@@ -59,6 +59,13 @@
   height:70px;
   overflow: hidden;
 }
+.adjusted-position1{
+  position: relative;
+  top:-300px;
+  width: 300px;
+  height:70px;
+  overflow: hidden;
+}
 .custom-font-size{
   font-size: 10px;
 }
@@ -70,6 +77,22 @@
 .custom-content:hover {
   background-color: rgb(113, 113, 108);
   color: rgb(242, 243, 243);
+}
+.verticle-align{
+  transform: rotate(90deg);
+  
+}
+.normal-background{
+  background-color:rgb(94, 222, 94);
+}
+.fast-background{
+  background-color:rgb(255, 136, 0);
+}
+.very-fast-background{
+  background-color:rgb(240, 14, 14);
+}
+.slow-background{
+  background-color:rgb(145, 158, 44);
 }
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
