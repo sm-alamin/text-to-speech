@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaRegPauseCircle, FaRegPlayCircle } from "react-icons/fa";
-import { SiBytedance } from "react-icons/si";
+import { BsSoundwave } from "react-icons/bs";
 import { CiSettings } from "react-icons/ci";
 import { IoCloseOutline, IoSpeedometerOutline } from "react-icons/io5";
 import { MdOutlineRecordVoiceOver } from "react-icons/md";
@@ -36,16 +36,18 @@ const TextToSpeech = () => {
     setIsSelectedVoice(!isSelectVoice);
     setIsSelectedSpeed(false); // Hide the speed button
   };
+
+  
     return (
-        <div className="position-relative">
+        <div className="bg-white">
       {/* First player */}
       {isFirstPlayerPlay && (
-        <div style={{width: '460px'}} className="border shadow-custom bg-secondary-subtle mx-auto d-flex justify-content-between px-3 align-items-center position-relative">
+        <div className="player border shadow-custom bg-white mx-auto d-flex justify-content-between px-3 align-items-center position-relative">
           <div
             className={`d-flex gap-3 justify-content-between align-items-center ${
               isPlaying ? "spinner-border text-primary" : ""
             }`}
-            style={{ height: "60px" }}
+            style={{ height: "55px" }}
           >
             <div className="position-relative">
               <FaRegPlayCircle
@@ -69,17 +71,17 @@ const TextToSpeech = () => {
             </div>
           </div>
           <div>
-            <SiBytedance />
+            <BsSoundwave className="fs-3"/>
           </div>
         </div>
       )}
 
       {/* Second player */}
       {isSecondPlayerPlay && (
-        <div style={{width: '460px'}} className="border shadow-custom bg-secondary-subtle mx-auto d-flex justify-content-between px-3 align-items-center position-relative">
+        <div className="player border shadow-custom bg-white mx-auto d-flex justify-content-between px-3 align-items-center position-relative">
           <div
             className="d-flex gap-3 justify-content-between align-items-center"
-            style={{ height: "60px" }}
+            style={{ height: "55px" }}
           >
             {!isSettingOpen && (
               <div>
@@ -100,27 +102,27 @@ const TextToSpeech = () => {
               <div className="d-flex gap-3 justify-content-between align-items-center">
                 <div className="audio-player">
                   {!isSelectSpeed && !isSelectVoice && (
-                    <div className="d-flex gap-2">
-                      <div onClick={handleChangeSpeed}>
-                        <button className="d-flex gap-2 border px-3 py-2">
+                    <div className="d-flex">
+                      <div style={{width: '92px' }} onClick={handleChangeSpeed} className="custom-hover d-block">
+                        <div className="d-flex gap-2 border px-2 py-2 rounded-1">
                           <IoSpeedometerOutline className="fs-4" />
                           <span>Speed</span>
-                        </button>
+                        </div>
                       </div>
-                      <div onClick={handleChangeVoice}>
-                        <button className="d-flex gap-2 border px-3 py-2">
+                      <div style={{width: '85px',marginLeft: '12px'}} onClick={handleChangeVoice} className="custom-hover d-block">
+                        <div className="d-flex gap-2 border px-2 py-2 rounded-1">
                           <MdOutlineRecordVoiceOver className="fs-4" />
                           <span>Voice</span>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   )}
                   {isSelectSpeed && (
                     <div className="d-flex gap-2">
                       <div onClick={handleChangeSpeed}>
-                        <button className="border-0 mt-1">
+                        <div className="border-0 mt-1">
                           <IoSpeedometerOutline className="fs-4" />
-                        </button>
+                        </div>
                       </div>
                       <div style={{width: '200px'}}>
                         <select className="form-select">
@@ -136,9 +138,9 @@ const TextToSpeech = () => {
                   {isSelectVoice && (
                     <div className="d-flex gap-2">
                       <div onClick={handleChangeVoice}>
-                        <button className="border-0 mt-1">
+                        <div className="border-0 mt-1">
                           <MdOutlineRecordVoiceOver className="fs-4" />
-                        </button>
+                        </div>
                       </div>
                       <div style={{width: '200px'}}>
                         <select className="form-select">
@@ -178,7 +180,7 @@ const TextToSpeech = () => {
               </div>
             )}
           </div>
-          <div className="">
+          <div className="ps-2">
             {/* Setting icon */}
             {!isSettingOpen ? (
               <div className="border rounded-pill px-2 cursor-pointer">
