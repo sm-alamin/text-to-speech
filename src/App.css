@@ -189,7 +189,7 @@
   height: 50px;
   transform: rotate(90deg);
   border: 0;
-  background: url('scroll.png');
+  background: url('/scroll.png');
   cursor: pointer;
 }
 
@@ -198,7 +198,7 @@
   height: 50px;
   transform: rotate(90deg);
   border: 0;
-  background: url('scroll.png');
+  background: url('/scroll.png');
   cursor: pointer;
 }
 /* X-Small devices (portrait phones, less than 576px) */
