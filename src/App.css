@@ -45,54 +45,161 @@
   left: 5%;
   width: 455px;
 }
+
 .adjusted-position{
   position: relative;
-  top:-300px;
+  top:-350px;
   width: 300px;
-  height:300px;
+  height:350px;
   overflow: scroll;
 }
+
 .adjusted-position1{
   position: relative;
-  top:-300px;
+  top:-350px;
   width: 300px;
   height:70px;
   overflow: hidden;
 }
-.adjusted-position1{
+.adjusted-position-m{
   position: relative;
-  top:-300px;
+  top:-450px;
+  width: 300px;
+  height:400px;
+  overflow: scroll;
+  
+}
+.adjusted-position3{
+  position: relative;
+  top:-450px;
   width: 300px;
   height:70px;
   overflow: hidden;
+  
 }
 .custom-font-size{
   font-size: 10px;
 }
+.fs-custom{
+  font-size: 15px;
+  font-weight: bold;
+}
 .custom-content{
-  padding: 10px;
-  background-color: whitesmoke;
+  background-color: #FFFFFF;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
-.custom-content:hover {
-  background-color: rgb(113, 113, 108);
-  color: rgb(242, 243, 243);
-}
+
 .verticle-align{
   transform: rotate(90deg);
   
 }
 .normal-background{
   background-color:rgb(94, 222, 94);
+  border-radius: 5px;
+  transition: all .4s ease;
+  color: white;
+
 }
 .fast-background{
   background-color:rgb(255, 136, 0);
+
+  border-radius: 5px;
+  transition: all .4s ease;
+  color: white;
+
 }
 .very-fast-background{
   background-color:rgb(240, 14, 14);
+
+  border-radius: 5px;
+  transition: all .4s ease;
+  color: white;
+
 }
 .slow-background{
   background-color:rgb(145, 158, 44);
+
+  border-radius: 5px;
+  transition: all .4s ease;
+  color: white;
+}
+
+
+/* Text to speech two css */
+.selected-item {
+  background-color: #ebebeb;
+  transition: all .3s ease;
+}
+
+.selected-item > div > div:last-child > TiTickOutline {
+  display: block;
+
+}
+
+.slidecontainer {
+  width: 0; /* Width of the outside container */
+  margin-top: 20px;
+}
+.ml-100{
+  margin-left: -60px;
+}
+.mr-100{
+  margin-right: 60px;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 260px; /* Full-width */
+  height: 1px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  transform: rotate(90deg);
+  border: 0;
+  background: url('scroll.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 50;
+  height: 50px;
+  transform: rotate(90deg);
+  border: 0;
+  background: url('scroll.png');
+  cursor: pointer;
 }
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
